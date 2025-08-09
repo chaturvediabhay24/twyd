@@ -34,11 +34,17 @@ async def get_script():
     return FileResponse("script.js", media_type="application/javascript")
 
 # Telegram bot configuration
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
-print(f"Bot token loaded: {TELEGRAM_BOT_TOKEN[:10]}..." if TELEGRAM_BOT_TOKEN != "YOUR_BOT_TOKEN_HERE" else "Bot token not loaded")
-print(f"Chat ID loaded: {TELEGRAM_CHAT_ID}" if TELEGRAM_CHAT_ID != "YOUR_CHAT_ID_HERE" else "Chat ID not loaded")
+print(f"Environment check:")
+print(f"Bot token: {'✓ Loaded' if TELEGRAM_BOT_TOKEN else '✗ Missing'}")
+print(f"Chat ID: {'✓ Loaded' if TELEGRAM_CHAT_ID else '✗ Missing'}")
+print(f"All env vars: {dict(os.environ)}")
+
+if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+    print("ERROR: Missing Telegram credentials!")
+    print("Please set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID environment variables")
 
 class ContactForm(BaseModel):
     fullName: str
