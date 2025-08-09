@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk With Your Data - AI-Powered Database Insights</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-comments-dollar"></i>
+                <span>TalkWithData</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#contact">Request Demo</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transform Your Database Into A 
+                        <span class="gradient-text">Conversational Partner</span>
+                    </h1>
+                    <p class="hero-description">
+                        Stop writing complex SQL queries. Simply ask questions in plain English and get instant, 
+                        actionable insights from your PostgreSQL database powered by advanced AI.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToContact()">
+                            <i class="fas fa-envelope"></i>
+                            Request Demo
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-rocket"></i>
+                            Get Started Free
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="data-flow-animation">
+                        <div class="database-icon">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="flow-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="data-particles"></div>
+                        </div>
+                        <div class="ai-brain">
+                            <i class="fas fa-brain"></i>
+                            <span>AI Engine</span>
+                        </div>
+                        <div class="flow-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="insight-particles"></div>
+                        </div>
+                        <div class="insights-icon">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Insights</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose TalkWithData?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Natural Language Queries</h3>
+                    <p>Ask questions like "What were our top-selling products last month?" instead of writing complex SQL.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Results</h3>
+                    <p>Get answers in seconds, not hours. Our AI processes your questions and delivers insights immediately.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your data never leaves your infrastructure. We connect securely to your existing PostgreSQL setup.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Smart Visualizations</h3>
+                    <p>Automatically generate charts and graphs to help you understand trends and patterns at a glance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Collaboration</h3>
+                    <p>Share insights across your organization. No technical skills required for anyone on your team.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>Connect to your existing PostgreSQL database in minutes, not weeks. Zero disruption to your workflow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Transform Your Data?</h2>
+            <p class="section-subtitle">Get a personalized demo and see how TalkWithData can revolutionize your data analysis</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Quick Setup</h3>
+                        <p>Connect your PostgreSQL database and start asking questions in under 10 minutes.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>Your data stays secure in your infrastructure. We never store or access your actual data.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Expert Support</h3>
+                        <p>Our team will help you get the most value from your data with personalized onboarding.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company Name *</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role">Your Role</label>
+                            <select id="role" name="role">
+                                <option value="">Select your role</option>
+                                <option value="CEO/Founder">CEO/Founder</option>
+                                <option value="CTO/Engineering Lead">CTO/Engineering Lead</option>
+                                <option value="Data Analyst">Data Analyst</option>
+                                <option value="Product Manager">Product Manager</option>
+                                <option value="Business Analyst">Business Analyst</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="companySize">Company Size</label>
+                            <select id="companySize" name="companySize">
+                                <option value="">Select company size</option>
+                                <option value="1-10">1-10 employees</option>
+                                <option value="11-50">11-50 employees</option>
+                                <option value="51-200">51-200 employees</option>
+                                <option value="201-1000">201-1000 employees</option>
+                                <option value="1000+">1000+ employees</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="useCase">Primary Use Case *</label>
+                            <textarea id="useCase" name="useCase" rows="3" placeholder="Tell us about your data analysis challenges and what you're hoping to achieve..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Request Personalized Demo
+                        </button>
+                        
+                        <p class="form-note">
+                            <i class="fas fa-lock"></i>
+                            Your information is secure and will only be used to provide you with a demo.
+                        </p>
+                    </form>
+                    
+                    <div id="formSuccess" class="form-success" style="display: none;">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Thank You!</h3>
+                            <p>We've received your demo request. Our team will reach out within 24 hours to schedule your personalized demonstration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Connect Your Database</h3>
+                        <p>Securely link your PostgreSQL database with our AI engine. Your data stays in your infrastructure.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Ask Natural Questions</h3>
+                        <p>Type or speak your questions in plain English. Our NLP understands context and intent.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Get Instant Insights</h3>
+                        <p>Receive comprehensive answers with visualizations, trends, and actionable recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Flexible Plans for Every Organization</h2>
+            <p class="section-subtitle">From individuals to enterprise teams, we have a solution that scales with your needs</p>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Individual</h3>
+                    <div class="price">
+                        <span class="amount">Perfect for</span>
+                    </div>
+                    <p class="tier-description">Solo data analysts, researchers, and small business owners who need powerful insights without the complexity.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Single user access</li>
+                        <li><i class="fas fa-check"></i> Personal database connections</li>
+                        <li><i class="fas fa-check"></i> Core AI insights</li>
+                        <li><i class="fas fa-check"></i> Standard visualizations</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="scrollToContact()">Get Pricing</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Professional</h3>
+                    <div class="price">
+                        <span class="amount">Perfect for</span>
+                    </div>
+                    <p class="tier-description">Growing teams and departments who need collaborative analytics with advanced features and integrations.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Multi-user collaboration</li>
+                        <li><i class="fas fa-check"></i> Multiple database connections</li>
+                        <li><i class="fas fa-check"></i> Advanced AI analytics</li>
+                        <li><i class="fas fa-check"></i> Custom dashboards</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                        <li><i class="fas fa-check"></i> API access</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="scrollToContact()">Get Pricing</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="amount">Perfect for</span>
+                    </div>
+                    <p class="tier-description">Large organizations requiring enterprise-grade security, custom integrations, and dedicated support.</p>
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Unlimited users & databases</li>
+                        <li><i class="fas fa-check"></i> On-premise deployment</li>
+                        <li><i class="fas fa-check"></i> Custom AI models</li>
+                        <li><i class="fas fa-check"></i> Advanced security features</li>
+                        <li><i class="fas fa-check"></i> 24/7 dedicated support</li>
+                        <li><i class="fas fa-check"></i> Custom integrations</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="scrollToContact()">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-comments-dollar"></i>
+                    <span>TalkWithData</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#support">Support</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TalkWithData. All rights reserved. Transform your data into conversations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
