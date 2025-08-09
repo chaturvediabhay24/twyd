@@ -59,7 +59,11 @@ def send_telegram_message(message: str):
             "parse_mode": "HTML"
         }
         
+        print(f"Sending to Telegram URL: {url[:50]}...")
         response = requests.post(url, data=data)
+        print(f"Telegram API response: {response.status_code}")
+        print(f"Response content: {response.text}")
+        
         return response.status_code == 200
     except Exception as e:
         print(f"Error sending Telegram message: {str(e)}")
@@ -102,6 +106,9 @@ async def submit_contact_form(form_data: ContactForm):
                 "message": "Demo request submitted successfully"
             }
         else:
+            # Log the error for debugging
+            print(f"Failed to send Telegram message. Bot token: {TELEGRAM_BOT_TOKEN[:10]}...")
+            print(f"Chat ID: {TELEGRAM_CHAT_ID}")
             raise HTTPException(status_code=500, detail="Failed to send notification")
             
     except Exception as e:
